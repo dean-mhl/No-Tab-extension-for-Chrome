@@ -1,0 +1,41 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "No Tab",
+    "version": "1.1",
+    "description": "Disables the `Ask Us` tab on MHL's website and the MVLC catalog (ANDOVER profile only).",
+    "browser_action": {
+        "default_icon": "tab32.png",
+        "default_title": "Chat tab is enabled. Click to disable."
+    },
+    "manifest_version": 2,
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "storage",
+        "webNavigation",
+        "webRequestBlocking",
+        "webRequest",
+        "activeTab",
+        "tabs",
+        "http://mhl.org/",
+		"https://mhl.org/",	
+		"http://www.mhl.org/",
+		"https://www.mhl.org/",
+        "http://mhl.org/*",
+		"https://mhl.org/*",
+        "http://www.mhl.org/*",
+		"https://www.mhl.org/*",		
+        "https://mvlc.ent.sirsi.net/client/en_US/andover/*",
+		"https://*.libanswers.com/*"
+    ],
+	"icons": { 
+		"16": "no-tab16.png",
+		"32": "no-tab32.png",
+        "48": "no-tab48.png",
+        "128": "no-tab128.png"
+	}
+}
